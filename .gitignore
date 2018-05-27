@@ -1,1 +1,6 @@
 virtual
+__pycache__
+/website/website/__pycache__
+/website/pessoas/__pycache__/*
+/website/pessoas/__pycache__/models.cpython-36.pyc
+/website/website/__pycache__/urls.cpython-36.pyc

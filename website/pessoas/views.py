@@ -34,11 +34,8 @@ class PessoaDetail(APIView):
 
     def get(self, request, pk, format=None):
         pessoa = self.get_object(pk)
-        serializer = PessoaSerializer(pessoa, data=request.data)
-        if serializer.is_valid():
-            serializer.save() 
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer = PessoaSerializer(pessoa)
+        return Response(serializer.data)
 
     def put(self, request, pk, format=None):
         pessoa = self.get_object(pk)
