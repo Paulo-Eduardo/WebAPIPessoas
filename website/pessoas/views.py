@@ -48,5 +48,5 @@ class PessoaDetail(APIView):
 
     def delete(self, request, pk, format=None):
         pessoa = self.get_object(pk)
-        snippet.delefe()
-        return Response(status=status.HTTP_204)
+        pessoa.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
